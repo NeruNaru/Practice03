@@ -45,9 +45,16 @@ public class Ex19 {
 						if(money >= minus_money) {
 							System.out.println("===============================");
 							System.out.println("출금액: " + minus_money);
-							System.out.println("남은 예금액: " + (money-minus_money));
+							System.out.println("예상 잔여 예금액" + (money-minus_money));
 							System.out.println("===============================");
-							money = money-minus_money;
+							System.out.println("출금 하시겠습니까?");
+							System.out.println("1.예 2.아니오");
+							int real = sc.nextInt();
+							if(real == 1) {
+								money = money-minus_money;
+							}else {
+								System.out.println("초기화면으로 돌아갑니다.");
+							}
 						} else {
 							System.out.println("출금액이 예금액보다 많습니다.");
 							System.out.println("초기화면으로 돌아갑니다.");
